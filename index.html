@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Esta línea es la clave para que sea responsiva en celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE RET</title>
+    <!-- Aquí conectamos nuestro CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ícono de la pestaña del navegador -->
+    <!-- El ?v=2 es un truco para que el navegador no use la versión vieja guardada -->
+    <link rel="icon" type="image/png" href="img/faviconRET.png?v=2">
+</head>
+
+<body>
+
+    <!-- Barra superior con información de contacto y redes sociales -->
+    <div class="topbar">
+        <div class="topbar-info">
+            <span class="topbar-item">
+                <img src="img/telefono.png" alt="Teléfono">55-XXXX-XXXX</span>
+            <span class="topbar-item">
+                <img src="img/correo.png" alt="Correo">
+                info@ieret.mx
+            </span>
+        </div>
+
+        <div class="topbar-social">
+            <a href="#" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+
+    <header class="menu">
+        <a href="#inicio" class="logo">
+            <img src="img/logo_IERET.png" alt="Logo IERET">
+        </a>
+        <nav class="menu-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Quiénes somos</a>
+            <a href="#locacion">Ubicación</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#partners">Socios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRIMERA SECCION ->INICIO: imagen de fondo, texto y botón -->
+        <section id="inicio" class="inicio">
+            <!-- Contenedor que junta el texto y el botón -->
+            <div class="inicio-contenido">
+
+                <!-- Seguimos usando h1 (bueno para buscadores), ahora con texto en vez de imagen -->
+                <h1>Innovación en </h1>
+                <h1>tus ideas.</h1>
+
+                <!-- tel: hace que en el celular se abra el marcador con el número listo -->
+                <!-- Cambia las X por tu número real, sin guiones ni espacios -->
+                <a href="tel:+5255XXXXXXXX" class="btn-llamar">Llámanos</a>
+            </div>
+        </section>
+
+
+        <!-- ¿QUIÉNES SOMOS?: mitad imagen, mitad texto -->
+        <section id="nosotros" class="nosotros">
+            <div class="nosotros-container">
+
+                <!-- Mitad izquierda: imagen -->
+                <div class="nosotros-img reveal reveal-left">
+                    <img src="img/img_reference.jpg" alt="Equipo de IE RET">
+                </div>
+
+                <!-- Mitad derecha: información -->
+                <div class="nosotros-texto reveal reveal-right">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Ubicación -->
+        <section id="locacion" class="locacion">
+            <div class="locacion-container">
+                <h2>Ubicación</h2>
+                <p class="locacion-texto">
+                    Trabajamos cerca de Fuente de Cibeles, una excelente Ubicación cerca de metrobus durango de la linea
+                    2.
+                </p>
+
+                <div class="locacion-media">
+                    <!-- Mitad izquierda: tu imagen -->
+                    <div class="locacion-img reveal reveal-left">
+                        <img src="img/cibeles.jpg" alt="Nuestra ubicación">
+                    </div>
+
+                    <!-- Mitad derecha: mapa de Google (pega aquí tu iframe) -->
+                    <div class="locacion-mapa reveal reveal-right">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8239811926155!2d-99.168886424786!3d19.42000978185673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff378aa470c1%3A0xbd10aad29abc63c3!2sFuente%20de%20Cibeles!5e0!3m2!1ses!2smx!4v1791995220116!5m2!1ses!2smx"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Dejo el id="comisiones" para que el enlace del menú siga funcionando -->
+        <section id="servicios" class="catalogo">
+
+            <!-- Encabezado: texto chico con rayita + título grande -->
+            <div class="catalogo-encabezado">
+                <p class="catalogo-sub">Descubre</p>
+                <h2>Lo que podemos hacer por ti</h2>
+            </div>
+
+            <div class="catalogo-grid">
+
+                <!-- Tarjeta 1 -->
+                <div class="tarjeta reveal" tabindex="0">
+                    <!-- Esta caja es la que gira -->
+                    <div class="tarjeta-giro">
+
+                        <!-- Cara de enfrente -->
+                        <div class="tarjeta-frente">
+                            <img src="img/catalogo1.jpg" alt="Servicio 1">
+                            <span class="tarjeta-etiqueta">Servicio 1</span>
+                        </div>
+
+                        <!-- Cara de atrás (la azul con el texto) -->
+                        <div class="tarjeta-detalle">
+                            <h3>Servicio 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                                ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="tarjeta reveal" tabindex="0">
+                    <div class="tarjeta-giro">
+                        <div class="tarjeta-frente">
+                            <img src="img/catalogo2.jpeg" alt="Servicio 2">
+                            <span class="tarjeta-etiqueta">Servicio 2</span>
+                        </div>
+                        <div class="tarjeta-detalle">
+                            <h3>Servicio 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                                ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="tarjeta reveal" tabindex="0">
+                    <div class="tarjeta-giro">
+                        <div class="tarjeta-frente">
+                            <img src="img/catalogo3.jpeg" alt="Servicio 3">
+                            <span class="tarjeta-etiqueta">Servicio 3</span>
+                        </div>
+                        <div class="tarjeta-detalle">
+                            <h3>Servicio 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                                ut labore
+                                et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+
+
+        <!-- PARTNERS -->
+        <section id="partners" class="partners">
+            <div class="partners-container">
+                <h2>Nuestros partners</h2>
+
+                <!-- Tarjeta blanca donde van los logos -->
+                <div class="partners-logos">
+                    <!-- Cambia los nombres por los de tus imágenes (guárdalas en la carpeta img) -->
+                    <img src="img/partner1.png" alt="Partner 1">
+                    <img src="img/partner2.png" alt="Partner 2">
+                    <img src="img/partner3.png" alt="Partner 3">
+                    <img src="img/partner4.png" alt="Partner 4">
+                    <img src="img/partner5.png" alt="Partner 5">
+                </div>
+            </div>
+        </section>
+
+        <!-- BANDA CON TEXTO EN MOVIMIENTO -->
+        <div class="banda">
+            <!-- El track lleva el texto DOS veces igual: así el loop no se corta -->
+            <div class="banda-track">
+                <span class="banda-texto">Servicio 1 — Servicio 2 — Servicio 3 — Servicio 4 — </span>
+                <span class="banda-texto" aria-hidden="true">Servicio 1 — Servicio 2 — Servicio 3 — Servicio 4 — </span>
+            </div>
+        </div>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="proyectos">
+            <h2>Proyectos recientemente realizados</h2>
+
+            <div class="proyectos-grid">
+
+                <!-- Proyecto 1 -->
+                <!-- tabindex="0" hace que en celular funcione con un toque -->
+                <div class="proyecto" tabindex="0">
+                    <img src="img/proyecto1.jpeg" alt="Proyecto 1">
+                    <!-- Capa azul que aparece al pasar el cursor -->
+                    <div class="proyecto-info">
+                        <span class="proyecto-tipo">Tipo de proyecto</span>
+                        <h3>Nombre del proyecto 1</h3>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="proyecto" tabindex="0">
+                    <img src="img/proyecto2.jpeg" alt="Proyecto 2">
+                    <div class="proyecto-info">
+                        <span class="proyecto-tipo">Tipo de proyecto</span>
+                        <h3>Nombre del proyecto 2</h3>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="proyecto" tabindex="0">
+                    <img src="img/proyecto3.jpeg" alt="Proyecto 3">
+                    <div class="proyecto-info">
+                        <span class="proyecto-tipo">Tipo de proyecto</span>
+                        <h3>Nombre del proyecto 3</h3>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="proyecto" tabindex="0">
+                    <img src="img/proyecto4.jpeg" alt="Proyecto 4">
+                    <div class="proyecto-info">
+                        <span class="proyecto-tipo">Tipo de proyecto</span>
+                        <h3>Nombre del proyecto 4</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer id="contacto" class="footer">
+        <div class="footer-container">
+
+            <!-- Columna 1: logo, descripción y redes -->
+            <div class="footer-col footer-about">
+                <!-- Se usa el mismo logo, el CSS lo pone en blanco -->
+                <img src="img/LOGO_BYN.png" alt="Logo IE RET" class="footer-logo">
+                <p>En IE RET estamos comprometidos en liderar el camino hacia un futuro más eficiente, inteligente
+                    y conectado.</p>
+                <p>Síguenos en nuestras redes sociales:</p>
+
+                <div class="footer-social">
+                    <a href="#" target="_blank" rel="noopener"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#" target="_blank" rel="noopener"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank" rel="noopener"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+
+            <!-- Columna 2: servicios -->
+            <div class="footer-col footer-services">
+                <h3>Nuestros servicios</h3>
+                <ul>
+                    <li><a href="#">Servicio 1</a></li>
+                    <li><a href="#">Servicio 2</a></li>
+                    <li><a href="#">Servicio 3</a></li>
+                    <li><a href="#">Servicio 4</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: contacto -->
+            <div class="footer-col footer-contact">
+                <h3>Contacto</h3>
+
+                <h4>Correo</h4>
+                <!-- mailto: abre la app de correo al dar clic -->
+                <p>
+                    <a href="mailto:info@ieret.mx">info@ieret.mx</a><br>
+                    <a href="mailto:contacto@ieret.mx">contacto@ieret.mx</a>
+                </p>
+
+                <h4>Teléfono</h4>
+                <!-- tel: en celular permite llamar con un toque (cambia las X por tu número real, sin guiones ni espacios) -->
+                <p><a href="tel:+5255XXXXXXXX">+52 55-XXXX-XXXX</a></p>
+            </div>
+
+        </div>
+
+        <!-- Línea de abajo con el copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Todos los derechos reservados por IE RET</p>
+        </div>
+    </footer>
+
+    <!-- El JS va al final para que cargue después del contenido -->
+    <script src="script.js"></script>
+</body>
+
+</html>

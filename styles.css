@@ -1,0 +1,875 @@
+
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+
+body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont,
+        Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Colores principales del sitio:
+   Azul marino: #0A3254
+   Dorado:      #E5A823
+*/
+
+
+/* ==============================
+   BARRA SUPERIOR
+   Se conservan los colores originales
+============================== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    background-color: #192236;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.topbar-info,
+.topbar-item,
+.topbar-social {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-info {
+    gap: 20px;
+}
+
+.topbar-item {
+    gap: 6px;
+}
+
+.topbar-item img {
+    width: 16px;
+    height: 16px;
+}
+
+.topbar-social {
+    gap: 12px;
+}
+
+.topbar-social img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.topbar-social a:hover img {
+    opacity: 0.7;
+}
+
+
+/* ==============================
+   MENÚ PRINCIPAL
+   Se conservan los colores originales
+============================== */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #f1e9e9;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 100px;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-links a {
+    padding: 6px 2px;
+    border-bottom: 3px solid transparent;
+    color: #333333;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: border-color 0.2s;
+}
+
+.menu-links a:hover,
+.menu-links a.activo {
+    border-bottom-color: #1d5a8a;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+
+/* ==============================
+   INICIO
+============================== */
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 130px);
+    min-height: 350px;
+    /* Solo el gif, sin capa oscura encima */
+    background: url("img/digital2.gif") center / cover no-repeat;
+}
+
+.inicio h1 {
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* clamp = tamaño que se adapta: mínimo 28px, máximo 64px */
+    font-size: clamp(28px, 5vw, 64px);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); /* sombrita para que se lea mejor */
+}
+
+/* Botón de llamada */
+.btn-llamar {
+    padding: 14px 32px; 
+    border-radius: 0px;           /* bordes bien redondeados */
+    background-color: #ffffff;     /* dorado de tu paleta */
+    color: #000000;                /* azul marino */
+    font-size: 18px; 
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+    transition: transform 0.2s, background-color 0.2s;
+
+    /* Para mover el botón sin afectar al texto */
+    position: relative;
+    top: 60px;     /* lo baja 25px (sube este número para bajarlo más) */
+    left: 300px;    /* lo mueve 20px a la derecha */
+}
+
+.btn-llamar:hover {
+    background-color: #E5A823;
+    transform: scale(1.06);        /* crece un poquito al pasar el mouse */
+}
+
+
+/* ==============================
+   TÍTULOS Y TEXTOS GENERALES
+============================== */
+
+.nosotros-texto h2,
+.locacion h2,
+.comisiones h2 {
+    color: #0A3254;
+    font-size: 32px;
+    margin: 0 0 20px;
+}
+
+.nosotros-texto p,
+.comisiones-texto p {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 16px;
+}
+
+
+/* ==============================
+   ¿QUIÉNES SOMOS?
+============================== */
+
+.nosotros {
+    padding: 60px 30px;
+    overflow: hidden;
+}
+
+.nosotros-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-img,
+.nosotros-texto {
+    flex: 1 1 0;
+}
+
+.nosotros-img img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* ==============================
+   ANIMACIONES DE APARICIÓN
+============================== */
+
+.reveal {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* ==============================
+   LOCACIÓN
+============================== */
+
+.locacion {
+    padding: 60px 30px;
+    background-color: #f5f7fa;
+    overflow: hidden;
+}
+
+.locacion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.locacion h2 {
+    text-align: center;
+}
+
+.locacion-texto {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #444444;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.locacion-media {
+    display: flex;
+    gap: 30px;
+}
+
+.locacion-img,
+.locacion-mapa {
+    flex: 1 1 0;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.locacion-img img,
+.locacion-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.locacion-img img {
+    object-fit: cover;
+}
+
+.locacion-mapa iframe {
+    border: 0;
+}
+
+
+/* ==============================
+   COMISIONES
+============================== */
+
+.comisiones {
+    padding: 60px 30px;
+    overflow: hidden;
+}
+
+.comisiones-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comisiones h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.comisiones-contenido {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.comisiones-texto,
+.comisiones-img {
+    flex: 1 1 0;
+}
+
+.comisiones-img {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.comisiones-img img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.comisiones-img:hover img {
+    transform: scale(1.08);
+}
+
+/* ==============================
+   CATÁLOGO
+============================== */
+
+.catalogo {
+    padding: 60px 30px;
+    background-color: #212429;   /* mismo fondo oscuro del footer */
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.catalogo-encabezado {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* "DESCUBRE" + la rayita dorada a su lado */
+.catalogo-sub {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.catalogo-sub::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #E5A823;
+}
+
+.catalogo h2 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 48px);  /* se adapta al tamaño de pantalla */
+    text-transform: uppercase;
+}
+
+/* 3 columnas iguales */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Tarjeta: es el "marco" fijo, aquí se define la profundidad 3D */
+.tarjeta {
+    height: 420px;
+    perspective: 1000px;   /* da el efecto de profundidad al girar */
+    cursor: pointer;
+}
+
+/* Caja que realmente gira */
+.tarjeta-giro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;   /* velocidad del giro (súbele para hacerlo más lento) */
+    transform-style: preserve-3d;      /* permite que las dos caras existan en 3D */
+}
+
+/* Al pasar el cursor (o tocar en celular) gira 180 grados */
+.tarjeta:hover .tarjeta-giro,
+.tarjeta:focus .tarjeta-giro {
+    transform: rotateY(180deg);
+}
+
+/* Las dos caras: se encimen y ocultan su parte de atrás */
+.tarjeta-frente,
+.tarjeta-detalle {
+    position: absolute;
+    inset: 0;
+    -webkit-backface-visibility: hidden;   /* para Safari */
+    backface-visibility: hidden;           /* oculta la cara cuando está de espaldas */
+}
+
+/* Cara de enfrente */
+.tarjeta-frente {
+    overflow: hidden;
+}
+
+.tarjeta-frente img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Etiqueta blanca de abajo a la derecha */
+.tarjeta-etiqueta {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    padding: 18px 36px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 20px;
+}
+
+/* Cara de atrás: ya viene girada 180°, por eso al girar la caja se ve derecha */
+.tarjeta-detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #0A3254;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.tarjeta-detalle h3 {
+    margin: 0 0 15px;
+    font-size: 26px;
+}
+
+.tarjeta-detalle p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   PARTNERS
+============================== */
+
+.partners {
+    padding: 60px 30px;
+}
+
+.partners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partners h2 {
+    margin: 0 0 20px;
+    color: #0A3254;
+    font-size: 28px;
+}
+
+/* Tarjeta blanca con sombrita */
+.partners-logos {
+    display: flex;
+    justify-content: center;   /* centra los logos horizontalmente */
+    align-items: center;       /* y verticalmente */
+    flex-wrap: wrap;           /* en celular se acomodan en varias filas */
+    gap: 30px 60px;            /* 30px vertical, 60px horizontal */
+    padding: 40px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Todos los logos con la misma altura para que se vean parejos */
+.partners-logos img {
+    display: block;
+    height: 45px;
+    width: auto;
+}
+
+
+/* ==============================
+   BANDA CON TEXTO "CAMINANDO"
+============================== */
+
+.banda {
+    overflow: hidden;           /* esconde lo que se sale de la pantalla */
+    background-color: #0A3254;  /* azul marino (si la quieres oscura, usa #192236) */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+/* Fila que se mueve: max-content = mide lo que mide todo el texto */
+.banda-track {
+    display: flex;
+    width: max-content;
+    animation: caminar 25s linear infinite;  /* sube los 25s para hacerlo más lento */
+}
+
+.banda-texto {
+    white-space: nowrap;        /* evita que el texto se parta en dos líneas */
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Mueve la fila hacia la izquierda justo la mitad (una copia del texto) y reinicia */
+@keyframes caminar {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+
+/* ==============================
+   PROYECTOS
+============================== */
+
+.proyectos {
+    padding: 70px 30px;
+}
+
+/* Título centrado con rayita dorada ARRIBA (como en la referencia) */
+.proyectos h2 {
+    margin: 0 0 50px;
+    color: #0A3254;
+    font-size: clamp(26px, 4vw, 40px);
+    text-align: center;
+}
+
+.proyectos h2::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 15px;
+    background-color: #E5A823;
+}
+
+/* 4 columnas iguales */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada proyecto: cuadrado perfecto */
+.proyecto {
+    position: relative;      /* para encimar la capa azul */
+    aspect-ratio: 1 / 1;     /* siempre cuadrado, sin importar el ancho */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.proyecto > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* la imagen llena el cuadro sin deformarse */
+}
+
+/* Capa azul con el texto abajo a la izquierda: empieza invisible */
+.proyecto-info {
+    position: absolute;
+    inset: 0;                /* cubre todo el cuadro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;   /* texto pegado abajo */
+    padding: 25px;
+    background-color: rgba(20, 80, 127, 0.92);  /* azul un poco transparente */
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Al pasar el cursor (o tocar en celular) aparece */
+.proyecto:hover .proyecto-info,
+.proyecto:focus .proyecto-info {
+    opacity: 1;
+}
+
+.proyecto-tipo {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.proyecto-info h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* ==============================
+   ACENTOS DORADOS
+============================== */
+
+/* Líneas decorativas de los títulos */
+.nosotros-texto h2::after,
+.locacion h2::after,
+.comisiones h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+    background-color: #E5A823;
+}
+
+/* Centrar la línea en los títulos correspondientes */
+.locacion h2::after,
+.comisiones h2::after {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ==============================
+   FOOTER
+   Se conservan los colores originales
+============================== */
+
+.footer {
+    padding-top: 50px;
+    background-color: #212429;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 40px;
+}
+
+.footer-about {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.footer-services,
+.footer-contact {
+    flex: 1 1 250px;
+}
+
+.footer-logo {
+    display: block;
+    width: auto;
+    height: 60px;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.footer p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+.footer-services h3,
+.footer-contact h3 {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+
+.footer-services ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-services li {
+    margin-bottom: 18px;
+}
+
+.footer-services a,
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-services a:hover {
+    color: #e9edf0;
+}
+
+.footer-contact h4 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.footer-contact a:hover {
+    color: #5aa9e6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #14507f;
+    transition: background-color 0.2s;
+}
+
+.footer-social a:hover {
+    background-color: #212429;
+}
+
+.footer-social img {
+    width: 22px;
+    height: 22px;
+}
+
+.footer-bottom {
+    padding: 20px 30px 5px;
+    border-top: 1px solid #3a3f47;
+    text-align: center;
+}
+
+
+/* ==============================
+   RESPONSIVE: TABLETAS Y CELULARES
+============================== */
+
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .menu-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .menu-links a {
+        font-size: 14px;
+    }
+
+    .inicio {
+        height: calc(100vh - 200px);
+    }
+
+    section {
+        scroll-margin-top: 150px;
+    }
+}
+
+@media (max-width: 800px) {
+    .nosotros-container,
+    .comisiones-contenido,
+    .locacion-media {
+        flex-direction: column;
+    }
+
+    /* Tarjetas una debajo de otra en celular */
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .partners-logos img {
+        height: 35px;   /* logos un poco más chicos en celular */
+    }
+
+    .nosotros-container,
+    .comisiones-contenido {
+        gap: 25px;
+    }
+
+    .nosotros-img img,
+    .comisiones-img img {
+        height: 250px;
+    }
+
+    .locacion-img,
+    .locacion-mapa {
+        flex: none;
+        height: 280px;
+    }
+
+    .nosotros-texto h2,
+    .locacion h2,
+    .comisiones h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        flex-direction: column;
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .topbar-info {
+        gap: 12px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
